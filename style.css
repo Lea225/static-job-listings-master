@@ -1,27 +1,36 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
-body{
+body {
     margin: 0;
     padding: 0;
     font-weight: 500;
     background-color: hsl(180, 52%, 96%);
-    font-family: 'League Spartan',sans-serif;
+    font-family: 'League Spartan', sans-serif;
 }
-header{ 
+
+header { 
     height: 23vh;
     background-size: 100% cover;
     background-repeat: no-repeat;
     background-color: hsl(180, 29%, 50%);
     background-image: url('images/bg-header-desktop.svg');
 }
-.container{
+
+.container {
     width: 70%;
     margin: 5% auto;
 }
+
 #selected-filters {
     display: none;
 }
+
 .selected-filters {
     height: 10vh;
     display: flex;
@@ -30,6 +39,7 @@ header{
     background-color: hsl(0, 0%, 100%);
     box-shadow: 4px 6px 8px hsla(180, 8%, 52%, 0.3);
 }
+
 .filter-item {
     display: flex;
     font-size: 0.9em;
@@ -38,6 +48,7 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
 .remove-icon {
     width: 12px;
     height: 12px;
@@ -47,10 +58,12 @@ header{
     border-radius: 3px;
     background-color: hsl(180, 29%, 50%);
 }
-.remove-icon:hover{
+
+.remove-icon:hover {
     background-color: hsl(180, 14%, 20%);
 }
-.item{
+
+.item {
     padding: 30px;
     display: flex;
     margin-bottom: 3%;
@@ -60,13 +73,16 @@ header{
     background-color: hsl(0, 0%, 100%);
     box-shadow: 4px 6px 8px hsla(180, 8%, 52%, 0.3);
 }
-.item.photosnap,.item.manage{
+
+.item.photosnap, .item.manage {
     border-left: 4px solid hsl(180, 29%, 50%);
 }
-img,p{
+
+img, p {
     margin-right: 15px;
 }
-.new,.featured{
+
+.new, .featured {
     padding: 10px 8px 8px;
     font-size: 0.7em;
     border-radius: 50px;
@@ -74,51 +90,63 @@ img,p{
     text-transform: uppercase;
     color: hsl(180, 52%, 96%);
 }
-.point{
+
+.point {
     font-weight: 700;
     align-self: center;
     margin: 0px 10px 6px 0px;
     color: hsl(180, 8%, 52%);
 }
-.new{
+
+.new {
     background-color: hsl(180, 29%, 50%); 
 }
-.featured{
+
+.featured {
     background-color: hsl(180, 14%, 20%);
 }
-.left-items{
+
+.left-items {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.infos{
+
+.infos {
     display: flex;
     flex-direction: column;
 }
-.top-infos,.bottom-infos{
+
+.top-infos, .bottom-infos {
     display: flex;
     align-items: center;
 }
-.bottom-infos p{
+
+.bottom-infos p {
     font-size: 0.9em;
     font-weight: 500;
 }
-.company{
+
+.company {
     font-weight: 600;
     color: hsl(180, 29%, 50%);
 }
-h1{
+
+h1 {
     font-size: 1.1em;
     color: hsl(180, 14%, 20%);
 }
-h1:hover{
+
+h1:hover {
     cursor: pointer;
     color: hsl(180, 29%, 50%);
 }
-.bottom-infos p{
+
+.bottom-infos p {
     color: hsl(180, 8%, 52%);
 }
-button{
+
+button {
     border: none;
     padding: 5px;
     font-weight: 700;
@@ -128,35 +156,48 @@ button{
     color: hsl(180, 29%, 50%);
     background-color: hsl(180, 52%, 96%);
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     color: hsl(180, 52%, 96%);
     background-color: hsl(180, 29%, 50%);
 }
+
 @media screen and (max-width: 950px) {
-    .container{
+    .container {
         width: 90%;
     }
-    .item{
-        margin-bottom: 10%;
+
+    .item {
         position: relative;
+        margin-bottom: 10%;
+        align-items: flex-start;
         flex-direction: column;
     }
-    img{
+
+    .remove-icon {
+        margin-left: 5px; 
+    }
+
+    .logo {
         top: -12%;
         left: 5%;
         height: 9vh;
         position: absolute;
     }
-    .right-items{
+
+    .selected-filters {
+        margin-bottom: 10%;
+    }
+
+    .right-items {
         align-items: flex-start;
         justify-content: flex-start;
         border-top: 2px solid hsl(180, 8%, 52%, 0.3);
     }
-    .right-items button{
+
+    .right-items button {
         margin-top: 5%;
     }
-    .infos{
-        align-items: last baselinentr;
-    }
+
 }
