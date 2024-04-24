@@ -1,0 +1,286 @@
+<!DOCTYPE Html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/Css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.Css">
+  <title>Frontend Mentor | Job Listings</title>
+  <script src="main.js" defer></script> 
+</head>
+<body>
+<header></header>
+    <section class="container">
+      <div class="selected-filters" id="selected-filters">
+        <a href="#" class="clear">Clear</a>
+      </div>
+      <div class="item photosnap">
+        <div class="left-items">
+          <img src="images/photosnap.svg" alt="photosnap">
+          <div class="infos">
+            <div class="top-infos">
+              <p class="company">Photosnap</p>
+              <p class="new">New!</p>
+              <p class="featured">Featured</p>
+            </div>
+            <h1>Senior Frontend Developer</h1>
+            <div class="bottom-infos">
+              <p>1d ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>USA only</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Senior">Senior</button>
+          <button data-filter="languages" data-value="Html">HTML</button>
+          <button data-filter="languages" data-value="Css">Css</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+        </div>
+      </div>
+
+      <div class="item manage">
+        <div class="left-items">
+          <img src="images/manage.svg" alt="manage">
+          <div class="infos">
+            <div class="top-infos">
+              <p class="company">Manage</p>
+              <p class="new">New!</p>
+              <p class="featured">Featured</p>
+            </div>
+            <h1>Fullstack Developer</h1>
+            <div class="bottom-infos">
+              <p>1d ago</p>
+              <span class="point">.</span>
+              <p>Part Time</p>
+              <span class="point">.</span>
+              <p>Remote</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Fullstack">Fullstack</button>
+          <button data-filter="level" data-value="Midweight">Midweight</button>
+          <button data-filter="languages" data-value="Python">Python</button>
+          <button data-filter="tools" data-value="React">React</button>
+        </div>
+      </div>
+
+      <div class="item account">
+        <div class="left-items">
+          <img src="images/account.svg" alt="account">
+          <div class="infos">
+            <div class="top-infos">
+              <p class="company">Account</p>
+              <p class="new">New!</p>
+            </div>
+            <h1>Junior Frontend Developer</h1>
+            <div class="bottom-infos">
+              <p>2d ago</p>
+              <span class="point">.</span>
+              <p>Part Time</p>
+              <span class="point">.</span>
+              <p>USA only</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="tools" data-value="React">React</button>
+          <button data-filter="tools" data-value="Sass">Sass</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+        </div>
+      </div>
+
+      <div class="item my-home">
+        <div class="left-items">
+          <img src="images/myhome.svg" alt="myhome">
+          <div class="infos">
+            <div>
+              <p class="company">MyHome</p>
+            </div>
+            <h1>Junior Frontend Developer</h1>
+            <div class="bottom-infos">
+              <p>5d ago</p>
+              <span class="point">.</span>
+              <p>Contract</p>
+              <span class="point">.</span>
+              <p>USA only</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="languages" data-value="Css">Css</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+        </div>
+      </div>
+
+      <div class="item loop-studios">
+        <div class="left-items">
+          <img src="images/loop-studios.svg" alt="loop-studios">
+          <div class="infos">
+            <div>
+              <p class="company">Loop Studios</p>
+            </div>
+            <h1>Software Engineer</h1>
+            <div class="bottom-infos">
+              <p>1w ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Fullstack">Fullstack</button>
+          <button data-filter="level" data-value="Midweight">Midweight</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+          <button data-filter="tools" data-value="Sass">Sass</button>
+          <button data-filter="tools" data-value="Ruby">Ruby</button>
+        </div>
+      </div>
+
+      <div class="item face-it">
+        <div class="left-items">
+          <img src="images/faceit.svg" alt="faceIt">
+          <div class="infos">
+            <div>
+              <p class="company">FaceIt</p>
+            </div>
+            <h1>Junior Backend Developer</h1>
+            <div class="bottom-infos">
+              <p>2w ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>UK only</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="backend">Backend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="languages" data-value="Ruby">Ruby</button>
+          <button data-filter="tools" data-value="RoR">RoR</button>
+        </div>
+      </div>
+
+      <div class="item shortly">
+        <div class="left-items">
+          <img src="images/shortly.svg" alt="shortly">
+          <div class="infos">
+            <div>
+              <p class="company">Shortly</p>
+            </div>
+            <h1>Junior Developer</h1>
+            <div class="bottom-infos">
+              <p>2w ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="languages" data-value="Html">HTML</button>
+          <button data-filter="tools" data-value="Sass">Sass</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+        </div>
+      </div>
+
+      <div class="item insure">
+        <div class="left-items">
+          <img src="images/insure.svg" alt="insure">
+          <div class="infos">
+            <div>
+              <p class="company">Insure</p>
+            </div>
+            <h1>Junior Frontend Developer</h1>
+            <div class="bottom-infos">
+              <p>2w ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>USA only</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="tools" data-value="Vue">Vue</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+          <button data-filter="tools" data-value="Sass">Sass</button>
+        </div>
+      </div>
+
+      <div class="item eyecamco">
+        <div class="left-items">
+          <img src="images/eyecam-co.svg" alt="eyecam-co">
+          <div class="infos">
+            <div>
+              <p class="company">Eyecam Co.</p>
+            </div>
+            <h1>Full Stack Engineer</h1>
+            <div class="bottom-infos">
+              <p>3w ago</p>
+              <span class="point">.</span>
+              <p>Full Time</p>
+              <span class="point">.</span>
+              <p>Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Fullstack">Fullstack</button>
+          <button data-filter="level" data-value="Midweight">Midweight</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+          <button data-filter="tools" data-value="Django">Django</button>
+          <button data-filter="languages" data-value="Python">Python</button>
+        </div>
+      </div>
+
+      <div class="item air-filter ">
+        <div class="left-items">
+          <img src="images/the-air-filter-company.svg" alt="the-air-filter-company">
+          <div class="infos">
+            <div>
+              <p class="company">The Air Filter Company</p>
+            </div>
+            <h1>Front-end Dev</h1>
+            <div class="bottom-infos">
+              <p>1mo ago</p>
+              <span class="point">.</span>
+              <p>Part Time</p>
+              <span class="point">.</span>
+              <p>Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-items">
+          <button data-filter="role" data-value="Frontend">Frontend</button>
+          <button data-filter="level" data-value="Junior">Junior</button>
+          <button data-filter="languages" data-value="Javascript">Javascript</button>
+          <button data-filter="tools" data-value="React">React</button>
+          <button data-filter="tools" data-value="Sass">Sass</button>
+        </div>
+      </div>
+    </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.Frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Léa CHIDAS</a>.
+  </div>
+</body>
+</html>
