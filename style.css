@@ -162,7 +162,20 @@ button:hover {
     color: hsl(180, 52%, 96%);
     background-color: hsl(180, 29%, 50%);
 }
+.clear-button {
+    padding: 0 30px;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-left: auto;
+    align-self: center;
+    color: hsl(180, 8%, 52%);
+}
 
+.clear-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: hsl(180, 29%, 50%);  
+}
 @media screen and (max-width: 950px) {
     .container {
         width: 90%;
@@ -199,5 +212,4 @@ button:hover {
     .right-items button {
         margin-top: 5%;
     }
-
 }

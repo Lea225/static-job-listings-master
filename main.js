@@ -8,11 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterValue = this.getAttribute('data-value');
             
             // Mettre à jour les filtres actifs
-            if (activeFilters[filterType] === filterValue) {
-                delete activeFilters[filterType];
-            } else {
-                activeFilters[filterType] = filterValue;
-            }
+            activeFilters[filterType] = filterValue;
             
             // Mettre à jour la div des filtres sélectionnés
             updateSelectedFilters(activeFilters);
@@ -56,6 +52,21 @@ document.addEventListener('DOMContentLoaded', function() {
             
             selectedFiltersDiv.appendChild(filterSpan);
         }
+
+        // Ajout du bouton "Clear"
+        if (hasActiveFilters) {
+            const clearButton = document.createElement('a');
+            clearButton.textContent = 'Clear';
+            clearButton.classList.add('clear-button');
+            clearButton.addEventListener('click', function() {
+                for (const key in filters) {
+                    delete filters[key];
+                }
+                updateSelectedFilters(filters);
+                filterJobs({}); // Filtrer tous les éléments
+            });
+            selectedFiltersDiv.appendChild(clearButton);
+        }
     }
 
     function filterJobs(filters) {
@@ -67,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             const isMatching = checkFilter(leftItems, filters) || checkFilter(rightItems, filters);
 
-            if (isMatching) {
+            if (Object.keys(filters).length === 0 || isMatching) {
                 item.style.display = 'flex';
             } else {
                 item.style.display = 'none';
@@ -79,22 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const buttons = element.querySelectorAll('button');
 
         for (const [key, value] of Object.entries(filters)) {
-            let isMatching = false;
             for (let i = 0; i < buttons.length; i++) {
                 const button = buttons[i];
                 const btnFilterType = button.getAttribute('data-filter');
                 const btnFilterValue = button.getAttribute('data-value');
 
                 if (btnFilterType === key && (value === 'all' || btnFilterValue === value)) {
-                    isMatching = true;
-                    break;
+                    return true;
                 }
-            }
-            if (!isMatching) {
-                return false;
             }
         }
         
-        return true;
+        return false;
     }
 });
